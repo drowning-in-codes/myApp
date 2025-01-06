@@ -1,0 +1,30 @@
+@import "./normalized.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+.title-bar {
+  app-region: drag;
+}
+body {
+  box-sizing: border-box;
+}
+.title-font {
+  font-family: "Playwrite AU SA", sans-serif;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+.user-info__name {
+  font-family: "Jersey 15", serif;
+  font-size: 1.5rem;
+  left: calc(50%);
+  bottom: -1rem;
+  transform: translateX(-50%);
+  font-weight: 400;
+}

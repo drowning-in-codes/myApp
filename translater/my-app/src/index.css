@@ -1,0 +1,37 @@
+@import "./normalized.css";
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Ubuntu", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.container__user-info {
+  flex: 1;
+}
+
+.container__content {
+  flex: 3;
+}
+
+.user_info__name {
+  font-family: "Playwrite AU SA", "Ubuntu", "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
