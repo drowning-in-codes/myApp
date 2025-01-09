@@ -7,7 +7,7 @@ const rootElement = document.querySelector("#root");
 const root = createRoot(rootElement);
 root.render(
   <HashRouter>
-    <div className="h-screen">
+    <div className="min-h-screen">
       <TitleBar />
       <UserContainer />
     </div>

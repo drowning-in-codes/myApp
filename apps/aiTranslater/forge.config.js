@@ -34,7 +34,7 @@ module.exports = {
       config: {
         mainConfig: "./webpack.main.config.js",
         devContentSecurityPolicy:
-          "default-src 'self' * 'unsafe-inline' data:; script-src 'self' * 'unsafe-eval' 'unsafe-inline' data:",
+          "default-src 'self' * 'unsafe-inline' data: blob:; script-src 'self' * 'unsafe-eval' 'unsafe-inline' data:;img-src 'self' * data: blob:",
         renderer: {
           config: "./webpack.renderer.config.js",
           entryPoints: [

@@ -8,12 +8,20 @@
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+  scrollbar-color: inherit;
+  scrollbar-width: inherit;
+  scrollbar-gutter: inherit;
 }
 .title-bar {
   app-region: drag;
 }
 body {
   box-sizing: border-box;
+}
+html {
+  scrollbar-color: #4a5568 #f1f1f1;
+  scrollbar-width: thin;
+  scrollbar-gutter: stable, both-edges;
 }
 .title-font {
   font-family: "Playwrite AU SA", sans-serif;
@@ -27,4 +35,9 @@ body {
   bottom: -1rem;
   transform: translateX(-50%);
   font-weight: 400;
+}
+/* textarea selection */
+textarea::selection {
+  background-color: #ff69b4;
+  color: #fff;
 }

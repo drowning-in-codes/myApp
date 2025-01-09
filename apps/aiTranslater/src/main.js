@@ -14,6 +14,7 @@ const createWindow = () => {
     titleBarStyle: "hidden",
     ...(process.platform !== "darwin" ? { titleBarOverlay: true } : {}),
     titleBarOverlay: {
+      height: 32,
       color: "#2f3241",
       symbolColor: "#74b1be",
     },

@@ -1,4 +1,5 @@
 const rules = require("./webpack.rules");
+const Dotenv = require('dotenv-webpack');
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const assets = ["css", "img"]; // asset directories
 const path = require("node:path");
@@ -13,14 +14,17 @@ module.exports = {
     rules,
   },
 
-  plugins: assets.map((asset) => {
-    return new CopyWebpackPlugin({
-      patterns: [
-        {
+  plugins: [
+    new Dotenv(),
+    ...assets.map((asset) => {
+      return new CopyWebpackPlugin({
+        patterns: [
+          {
           from: path.resolve(__dirname, "src", asset),
           to: asset,
         },
       ],
-    });
-  }),
+      });
+    }),
+  ],
 };
